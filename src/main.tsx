@@ -30,8 +30,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 
           <Separator />
 
-          <Tweet content="tweet1" />
-          <Tweet content="tweet2" />
+          {/* {tweets.map} */}
         </main>
       </div>
     </div>

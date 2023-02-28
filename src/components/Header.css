@@ -13,3 +13,9 @@
   height: 1.5rem;
   color: var(--twitter-blue);
 }
+
+@media (max-width: 780px) {
+  .timeline-header {
+    padding: 1.5rem;
+  }
+}

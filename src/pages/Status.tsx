@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { Separator } from "../components/Separator";
 import { Tweet } from "../components/Tweet";
 import { FormEvent, KeyboardEvent, useState } from "react";
+import { PaperPlaneRight } from "phosphor-react";
 
 export function Status() {
   // Estado
@@ -46,7 +47,10 @@ export function Status() {
             }}
           ></textarea>
         </label>
-        <button type="submit">Answer</button>
+        <button type="submit">
+          <PaperPlaneRight />
+          <span>Answer</span>
+        </button>
       </form>
 
       <Separator />

@@ -1,38 +1,11 @@
+import "./global.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Sidebar } from "./components/Sidebar";
-import { Header } from "./components/Header";
-import { Tweet } from "./components/Tweet";
-import { Separator } from "./components/Separator";
-
-import "./global.css";
-
-const tweets = ["Meu primeiro tweet", "Teste", "Deu certo tweetar!"];
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <div className="layout">
-      <Sidebar />
-
-      <div className="content">
-        <Header title="Home" />
-        <main className="timeline">
-          <form className="new-tweet-form">
-            <label htmlFor="tweet">
-              <img
-                src="https://github.com/gnovaisx.png"
-                alt="Guilherme Novais"
-              />
-              <textarea id="tweet" placeholder="What's happening?"></textarea>
-            </label>
-            <button type="submit">Tweet</button>
-          </form>
-
-          <Separator />
-
-          {/* {tweets.map} */}
-        </main>
-      </div>
-    </div>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
